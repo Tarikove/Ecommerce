@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
     {
         Layout = (string)parentLayout;
@@ -8,7 +9,7 @@
         Layout = "/Areas/Identity/Pages/_Layout.cshtml";
     }
 }
-
+<div class="div2">
 <h1>Manage your account</h1>
 
 <div>
@@ -23,7 +24,7 @@
         </div>
     </div>
 </div>
-
+</div>
 @section Scripts {
     @RenderSection("Scripts", required: false)
 }

@@ -1,8 +1,7 @@
 ﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
 
-
-
-<h5>      Liste des utilisateurs</h5>
+<p></p>
+<h2>      Liste des utilisateurs</h2>
 <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Créer un compte</a>
 
 <font size="-1">
@@ -12,8 +11,10 @@
     <thead>
         <tr>
             <td>Id</td>
-            <td>Nom</td>
+            <td>Identifiant</td>
             <td>Mot de passe</td>
+            <td>Telephone</td>
+            
         </tr>
     </thead>
     <tbody>
@@ -24,8 +25,12 @@
                 <td>
                  <a class="nav-link text-black" asp-area="Identity" asp-page="/Account/Register"> @user.Email</a>
                  </td>
+                   
                  <td>@user.PasswordHash</td>
-            </tr>
+                 <td>@user.PhoneNumber</td>
+                
+                 
+             </tr>
         }
     </tbody>
     
